@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D Club | Committee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Navbar -->
+    <nav>
+        <div class="logo-container">
+            <img src="images\logo.png" alt="R&D Club Logo">
+            <div class="logo-text-group">
+            <h3>Research & Development </h3>
+                <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="committee.html" class="active">Committee</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="registration.html" class="cta-btn">Register</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 class="page-title">Organizing Committee</h1>
+
+        <!-- 1. HEAD OF DEPARTMENT (Centered Top) -->
+        <h2 class="section-title">Head of Department</h2>
+        <!-- Used Flexbox to perfectly center the single HOD card -->
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <div class="glass-card" style="text-align: center; max-width: 350px; width: 100%;">
+                <!-- Update Image Path for HOD -->
+                <img src="images\sonali.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="HOD" class="profile-img">
+                <h3>Dr. Sonali Patil</h3>
+                <p class="role">Head of Computer Engineering</p>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">
+                    Visionary Leader & Guide
+                </p>
+            </div>
+        </div>
+
+        <!-- 2. FACULTY ADVISORS (3 Cards Centered) -->
+        <h2 class="section-title">Faculty Coordinators</h2>
+        <!-- Changed grid to Flex + Wrap + Justify Center to force centering -->
+        <div class="team-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+            
+            <!-- Dr. Reena Kharat -->
+            <div class="glass-card" style="text-align: center; flex: 0 1 300px;">
+                <img src="images/reena.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="Dr. Reena Kharat" class="profile-img">
+                <h3>Dr. Reena Kharat</h3>
+                <p class="role">Research & Development Coordinator</p>
+            </div>
+
+            <!-- Dr. Asmita Manna -->
+            <div class="glass-card" style="text-align: center; flex: 0 1 300px;">
+                <img src="images/asmita.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="Dr. Asmita Manna" class="profile-img">
+                <h3>Dr. Asmita Manna</h3>
+                <p class="role">Research & Development Coordinator</p>
+            </div>
+
+            <!-- Dr. Meghana Lokhande -->
+            <div class="glass-card" style="text-align: center; flex: 0 1 300px;">
+                <img src="images/meghana.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="Dr. Meghana Lokhande" class="profile-img">
+                <h3>Dr. Meghana Lokhande</h3>   
+                <p class="role">Research & Development Coordinator</p>
+            </div>
+        </div>
+
+        <!-- 3. STUDENT COMMITTEE (Example) -->
+        <h2 class="section-title">Student Committee</h2>
+        <div class="team-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
+            <!-- Student 1 -->
+            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
+                <img src="https://via.placeholder.com/150" alt="Student" class="profile-img">
+                <h3>Student Name</h3>
+                <p class="role">President</p>
+            </div>
+            <!-- Student 2 -->
+            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
+                <img src="https://via.placeholder.com/150" alt="Student" class="profile-img">
+                <h3>Student Name</h3>
+                <p class="role">Technical Head</p>
+            </div>
+            <!-- Student 3 -->
+            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
+                <img src="https://via.placeholder.com/150" alt="Student" class="profile-img">
+                <h3>Student Name</h3>
+                <p class="role">Event Manager</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        
+        <!-- Column 1: Brand -->
+        <div class="footer-col brand">
+            <div class="footer-brand-box">
+                <img src="images\logo.png" alt="R&D Logo">
+                <div class="brand-text">
+                    <h2>R&D Club</h2>
+                    <p>Research & Development<br>Club PCCOE</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2: Location -->
+        <div class="footer-col">
+            <h4>Location</h4>
+            <p>Sector - 26, Pradhikaran, Nigdi,</p>
+            <p>Near Akurdi Railway Station,</p>
+            <p>Pune - 411 044</p>
+        </div>
+
+        <!-- Column 3: Follow Us -->
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>Ph: +91 9999999999</p>
+            <p>Ph: +91 8888888888</p>
+            <a href="mailto:research@pccoe.org" class="footer-link">research@pccoe.org</a>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>© 2026 R&D Club. All Rights Reserved.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

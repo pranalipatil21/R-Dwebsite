@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D Club | Guidelines</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Specific layout for Guidelines to handle Image + Text side-by-side */
+        .guideline-flex {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .guideline-img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--contrast-orange);
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+        }
+        @media (max-width: 768px) {
+            .guideline-flex { flex-direction: column-reverse; }
+            .guideline-img { width: 100%; height: 180px; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    
+    <nav>
+        <div class="logo-container">
+            <img src="images\logo.png" alt="Logo">
+            <div class="logo-text-group">
+            <h3>Research & Development </h3>
+                <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="guidelines.html" class="active">Guidelines</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="registration.html" class="cta-btn">Register</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 class="page-title">Guidelines & Instructions</h1>
+
+        <!-- 1. General Instructions (Slides from Left) -->
+        <div class="glass-card guideline-section scroll-animate from-left">
+            <div class="guideline-flex">
+                <div style="flex: 1;">
+                    <h3>General Instructions</h3>
+                    <p>Authors from Computer Department of PCCOE are invited to submit original research papers. Submissions should align with the conference themes.</p>
+                    <br>
+                    <h4 style="color: var(--contrast-orange);">Plagiarism Warning</h4>
+                    <ul class="guideline-list" style="margin-top: 10px;">
+                        <li>The work must be entirely original.</li>
+                        <li>Self-plagiarism is strictly prohibited.</li>
+                        <li>Proper permissions for third-party materials must be obtained.</li>
+                    </ul>
+                </div>
+                <!-- Image -->
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=500&q=80" alt="Meeting" class="guideline-img">
+            </div>
+        </div>
+
+        <!-- 2. Format of Paper (Slides from Right) -->
+        <div class="glass-card guideline-section scroll-animate from-right">
+            <div class="guideline-flex" style="flex-direction: row-reverse;">
+                <div style="flex: 1;">
+                    <h3>Format of Paper</h3>
+                    <ul class="guideline-list">
+                        <li>File Format: PDF Only</li>
+                        <li>Page Limit: Maximum 6 pages</li>
+                        <li>Font: Times New Roman, 12-point</li>
+                        <li>Margins: 1-inch all sides</li>
+                        <li>Sections: Abstract, Intro, Methodology, Results, Conclusion</li>
+                    </ul>
+                    <a href="paper_format.pdf" target="_blank" class="cta-btn" style="display:inline-block; margin-top:15px; font-size:0.8rem;">View Paper Template</a>
+                </div>
+                <!-- Image -->
+                <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=500&q=80" alt="Writing" class="guideline-img">
+            </div>
+            <!-- Mobile Fix for reverse layout -->
+            <style>@media(max-width:768px){ .guideline-flex[style*="row-reverse"] { flex-direction: column-reverse !important; } }</style>
+        </div>
+
+        <!-- 3. Format of PPT (Slides from Left) -->
+        <div class="glass-card guideline-section scroll-animate from-left">
+            <div class="guideline-flex">
+                <div style="flex: 1;">
+                    <h3>Format of Presentation (PPT)</h3>
+                    <ul class="guideline-list">
+                        <li>Slide Limit: Maximum 10 slides</li>
+                        <li>Font: Arial or Calibri, Min 24pt</li>
+                        <li>Time: Maximum 15 minutes per team</li>
+                        <li>Content: Focus on results and visuals, avoid overcrowding text.</li>
+                    </ul>
+                    <a href="ppt_format.pdf" target="_blank" class="cta-btn" style="display:inline-block; margin-top:15px; font-size:0.8rem;">View PPT Template</a>
+                </div>
+                <!-- Image -->
+                <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=500&q=80" alt="Presentation" class="guideline-img">
+            </div>
+        </div>
+    </main>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        
+        <!-- Column 1: Brand -->
+        <div class="footer-col brand">
+            <div class="footer-brand-box">
+                <img src="images\logo.png" alt="R&D Logo">
+                <div class="brand-text">
+                    <h2>R&D Club</h2>
+                    <p>Research & Development<br>Club PCCOE</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2: Location -->
+        <div class="footer-col">
+            <h4>Location</h4>
+            <p>Sector - 26, Pradhikaran, Nigdi,</p>
+            <p>Near Akurdi Railway Station,</p>
+            <p>Pune - 411 044</p>
+        </div>
+
+        <!-- Column 3: Follow Us -->
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>Ph: +91 9999999999</p>
+            <p>Ph: +91 8888888888</p>
+            <a href="mailto:research@pccoe.org" class="footer-link">research@pccoe.org</a>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>© 2026 R&D Club. All Rights Reserved.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
