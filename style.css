@@ -914,3 +914,70 @@ nav.nav-zoomed .nav-links a {
     color: #fff;
     box-shadow: none;
 }
+
+/* --- MOBILE MENU STYLES (Add to bottom of style.css) --- */
+
+/* Hamburger Icon (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.hamburger:hover {
+    color: var(--contrast-orange);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 900px) {
+    /* Adjust Navbar Box */
+    nav {
+        padding: 15px 25px;
+        width: 90%;
+    }
+
+    /* Show Hamburger Icon */
+    .hamburger {
+        display: block;
+    }
+
+    /* Transform Nav Links into a Mobile Dropdown */
+    .nav-links {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 70px; /* Pushes it below the navbar */
+        left: 0;
+        width: 100%;
+        background: rgba(5, 10, 25, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        border: 1px solid var(--glass-border);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 30px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        z-index: 999;
+    }
+
+    /* When the class 'active' is added via JS, show the menu */
+    .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+    
+    .nav-links a {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Animation for Menu */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

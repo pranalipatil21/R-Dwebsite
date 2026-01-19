@@ -268,3 +268,16 @@ function generateMemberFields() {
         container.insertAdjacentHTML('beforeend', memberHtml);
     }
 }
+
+/* --- MOBILE MENU TOGGLE --- */
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
+// Close menu when a link is clicked (optional, good for user experience)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+    });
+});

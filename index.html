@@ -10,23 +10,30 @@
 <body>
     <canvas id="bg-canvas"></canvas>
 
-    <nav>
-        <!-- Replace the existing .logo-container in ALL files -->
-        <div class="logo-container">
-            <img src="images\logo.png" alt="R&D Club Logo">
-            <div class="logo-text-group">
-            <h3>Research & Development </h3>
-        <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
-        </div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="committee.html">Committee</a></li>
-            <li><a href="guidelines.html">Guidelines</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="registration.html" class="cta-btn">Register / Submit</a></li>
-        </ul>
-    </nav>
+            <nav>
+                <div class="logo-container">
+                    <!-- Update image path if needed (e.g. images/logo.png) -->
+                    <img src="images/logo.png" alt="Logo"> 
+                    <div class="logo-text-group">
+                        <h3>R&D Club</h3>
+                        <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
+                    </div>
+                </div>
+
+                <!-- HAMBURGER ICON -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="guidelines.html">Guidelines</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <!-- Check active class for each page -->
+                    <li><a href="registration.html" class="cta-btn">Register</a></li>
+                </ul>
+            </nav>
 
     <main class="container">
         <!-- Hero Section -->
@@ -149,8 +156,6 @@
             <div class="social-icons">
                 <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
 

@@ -11,23 +11,30 @@
 <body>
     <canvas id="bg-canvas"></canvas>
     
-    <nav>
-        <div class="logo-container">
-            <img src="images/logo.png" alt="Logo"> <!-- Ensure this path is correct -->
-            <div class="logo-text-group">
-                <h3>R&D Club</h3>
-                <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
-            </div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="committee.html">Committee</a></li>
-            <li><a href="guidelines.html">Guidelines</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="registration.html" class="cta-btn active">Register</a></li>
-        </ul>
-    </nav>
+            <nav>
+                <div class="logo-container">
+                    <!-- Update image path if needed (e.g. images/logo.png) -->
+                    <img src="images/logo.png" alt="Logo"> 
+                    <div class="logo-text-group">
+                        <h3>R&D Club</h3>
+                        <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
+                    </div>
+                </div>
 
+                <!-- HAMBURGER ICON -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="guidelines.html">Guidelines</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <!-- Check active class for each page -->
+                    <li><a href="registration.html" class="cta-btn">Register</a></li>
+                </ul>
+            </nav>
     <main class="container">
         <h1 class="page-title">Conference Registration</h1>
 
@@ -145,40 +152,53 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col brand">
-                <div class="footer-brand-box">
-                    <img src="images/logo.png" alt="R&D Logo">
-                    <div class="brand-text">
-                        <h2>R&D Club</h2>
-                        <p>Research & Development<br>Club PCCOE</p>
-                    </div>
+ <!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        
+        <!-- Column 1: Brand -->
+        <div class="footer-col brand">
+            <div class="footer-brand-box">
+                <img src="images\logo.png" alt="R&D Logo">
+                <div class="brand-text">
+                    <h2>R&D Club</h2>
+                    <p>Research & Development<br>Club PCCOE</p>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Location</h4>
-                <p>Sector - 26, Pradhikaran, Nigdi,<br>Near Akurdi Railway Station,<br>Pune - 411 044</p>
-            </div>
-            <div class="footer-col">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <p>Ph: +91 8766672751</p>
-                <a href="mailto:research@pccoe.org" class="footer-link">research@pccoe.org</a>
+        </div>
+
+        <!-- Column 2: Location -->
+        <div class="footer-col">
+            <h4>Location</h4>
+            <p>Sector - 26, Pradhikaran, Nigdi,</p>
+            <p>Near Akurdi Railway Station,</p>
+            <p>Pune - 411 044</p>
+        </div>
+
+        <!-- Column 3: Follow Us -->
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 R&D Club. All Rights Reserved.</p>
+
+        <!-- Column 4: Contact Us -->
+        <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>Ph: +91 8446257853</p>
+            <p>Ph: +91 8975806265</p>
+            <a href="mailto:researchdevelopmentclubpccoe@gmail.com" class="footer-link">researchdevelopmentclubpccoe@gmail.com</a>
         </div>
-    </footer>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>© 2026 R&D Club. All Rights Reserved.</p>
+    </div>
+</footer>
 
     <!-- LOAD SCRIPT AT THE END -->
     <script src="script.js"></script>
