@@ -2,144 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>R&D Conference | Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D Club | Schedule</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <canvas id="bg-canvas"></canvas>
     
-            <nav>
-                <div class="logo-container">
-                    <!-- Update image path if needed (e.g. images/logo.png) -->
-                    <img src="images/logo.png" alt="Logo"> 
-                    <div class="logo-text-group">
-                        <h3>Research & Development</h3>
-                        <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
-                    </div>
-                </div>
+    <nav>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo"> 
+            <div class="logo-text-group">
+                <h3>R&D Club</h3>
+                <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
+            </div>
+        </div>
 
-                <!-- HAMBURGER ICON -->
-                <div class="hamburger" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+        <!-- HAMBURGER ICON -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="committee.html">Committee</a></li>
-                    <li><a href="guidelines.html">Guidelines</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
-                    <!-- Check active class for each page -->
-                    <li><a href="registration.html" class="cta-btn">Register</a></li>
-                </ul>
-            </nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="schedule.html" class="active">Schedule</a></li>
+            <li><a href="registration.html" class="cta-btn">Register</a></li>
+        </ul>
+    </nav>
 
     <main class="container">
         <h1 class="page-title">Event Timeline</h1>
 
         <div class="timeline">
-            <!-- Event 1 -->
-            <div class="timeline-item left">
+            <!-- Event 1: LEFT -->
+            <div class="timeline-item left scroll-animate from-left">
                 <div class="content">
-                    <div class="date">10th February, 2026</div>
+                    <div class="date">5th February, 2026</div>
                     <h3>Registration & Submission Starts</h3>
                     <p>Start registration and paper-submission by Paper-Call Emails.</p>
                 </div>
             </div>
 
-            <!-- Event 2 -->
-            <div class="timeline-item right">
+            <!-- Event 2: RIGHT -->
+            <div class="timeline-item right scroll-animate from-right">
                 <div class="content">
-                    <div class="date">20th February, 2026</div>
+                    <div class="date">9th February, 2026</div>
                     <h3>Registration & Submission End</h3>
                     <p>Formation of team and registration to be done before the deadline.</p>
                 </div>
             </div>
 
-            <!-- Event 3 -->
-            <div class="timeline-item left">
+            <!-- Event 3: LEFT -->
+            <div class="timeline-item left scroll-animate from-left">
                 <div class="content">
-                    <div class="date">3rd - 5th March, 2026</div>
+                    <div class="date">20th February, 2026</div>
                     <h3>Status Update</h3>
                     <p>Paper Accepted or Rejected with attached suggestions of major and minor changes.</p>
                 </div>
             </div>
 
-            <!-- Event 4 -->
-            <div class="timeline-item right">
+            <!-- Event 4: RIGHT -->
+            <div class="timeline-item right scroll-animate from-right">
                 <div class="content">
-                    <div class="date">5th - 10th March, 2026</div>
+                    <div class="date">27th February, 2026</div>
                     <h3>Final Submission</h3>
                     <p>Final paper must be submitted with corrected major and minor changes.</p>
                 </div>
             </div>
 
-            <!-- Event 5 -->
-           <!-- In schedule.html -->
-
-            <!-- Event 5 -->
-            <div class="timeline-item left">
+            <!-- Event 5: LEFT (Fixed: changed from right to left) -->
+            <div class="timeline-item left scroll-animate from-left">
                 <div class="content">
-            <!-- UPDATED DATE -->
-                <div class="date">Friday, 20th March 2026</div>
-        
-            <!-- UPDATED EVENT NAME -->
-            <h3>Young Professional Conference</h3>
-            <p>Commencement of the event.</p>
+                    <div class="date">13th March, 2026</div>
+                    <h3>Final List of Accepted Papers</h3>
+                    <p>Final list of accepted papers will be published.</p>
+                </div>
             </div>
-        </div>
-        </div>
-    </main>
 
-   <!-- Footer Section -->
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        
-        <!-- Column 1: Brand -->
-        <div class="footer-col brand">
-            <div class="footer-brand-box">
-                <img src="images\logo.png" alt="R&D Logo">
-                <div class="brand-text">
-                    <h2>R&D Club</h2>
-                    <p>Research & Development<br>Club PCCOE</p>
+            <!-- Event 6: RIGHT (Fixed: changed from left to right) -->
+            <div class="timeline-item right scroll-animate from-right">
+                <div class="content">
+                    <div class="date" style="color: #22c55e;">Wednesday, 18th March 2026</div>
+                    <h3>Young Professional Conference</h3>
+                    <p>Commencement of the event.</p>
                 </div>
             </div>
         </div>
+    </main>
 
-        <!-- Column 2: Location -->
-        <div class="footer-col">
-            <h4>Location</h4>
-            <p>Sector - 26, Pradhikaran, Nigdi,</p>
-            <p>Near Akurdi Railway Station,</p>
-            <p>Pune - 411 044</p>
-        </div>
-
-        <!-- Column 3: Follow Us -->
-        <div class="footer-col">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-col brand">
+                <div class="footer-brand-box">
+                    <img src="images/logo.png" alt="R&D Logo">
+                    <div class="brand-text">
+                        <h2>R&D Club</h2>
+                        <p>Research & Development<br>Club PCCOE</p>
+                    </div>
+                </div>
             </div>
+
+            <!-- Column 2: Location -->
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p>Sector - 26, Pradhikaran, Nigdi,</p>
+                <p>Near Akurdi Railway Station,</p>
+                <p>Pune - 411 044</p>
+            </div>
+
+            <!-- Column 3: Follow Us -->
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 4: Contact Us -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Ph: +91 8446257853</p>
+                <p>Ph: +91 8975806265</p>
+                <a href="mailto:researchdevelopmentclubpccoe@gmail.com" class="footer-link">researchdevelopmentclubpccoe@gmail.com</a>
+            </div>
+
         </div>
 
-        <!-- Column 4: Contact Us -->
-        <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>Ph: +91 8446257853</p>
-            <p>Ph: +91 8975806265</p>
-            <a href="mailto:researchdevelopmentclubpccoe@gmail.com" class="footer-link">researchdevelopmentclubpccoe@gmail.com</a>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2026 R&D Club. All Rights Reserved.</p>
         </div>
+    </footer>
 
-    </div>
-
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p>© 2026 R&D Club. All Rights Reserved.</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
