@@ -21,8 +21,11 @@
             border: 1px solid var(--contrast-orange);
             box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
         }
+        /* Mobile Fix: Ensures images stack correctly on small screens */
         @media (max-width: 768px) {
             .guideline-flex { flex-direction: column-reverse; }
+            /* This forces reversed rows (Right-sided images) to stack correctly on mobile */
+            .guideline-flex[style*="row-reverse"] { flex-direction: column-reverse !important; }
             .guideline-img { width: 100%; height: 180px; }
         }
     </style>
@@ -30,35 +33,33 @@
 <body>
     <canvas id="bg-canvas"></canvas>
     
-            <nav>
-                <div class="logo-container">
-                    <!-- Update image path if needed (e.g. images/logo.png) -->
-                    <img src="images/logo.png" alt="Logo"> 
-                    <div class="logo-text-group">
-                        <h3>Research & Development</h3>
-                        <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
-                    </div>
-                </div>
+    <nav>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo"> 
+            <div class="logo-text-group">
+                <h3>Research & Development</h3>
+                <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
+            </div>
+        </div>
 
-                <!-- HAMBURGER ICON -->
-                <div class="hamburger" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+        <!-- HAMBURGER ICON -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="committee.html">Committee</a></li>
-                    <li><a href="guidelines.html">Guidelines</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
-                    <!-- Check active class for each page -->
-                    <li><a href="registration.html" class="cta-btn">Register</a></li>
-                </ul>
-            </nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="guidelines.html" class="active">Guidelines</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="registration.html" class="cta-btn">Register</a></li>
+        </ul>
+    </nav>
 
     <main class="container">
         <h1 class="page-title">Guidelines & Instructions</h1>
 
-        <!-- 1. General Instructions (Slides from Left) -->
+        <!-- 1. General Instructions (Left) -->
         <div class="glass-card guideline-section scroll-animate from-left">
             <div class="guideline-flex">
                 <div style="flex: 1;">
@@ -72,12 +73,11 @@
                         <li>Proper permissions for third-party materials must be obtained.</li>
                     </ul>
                 </div>
-                <!-- Image -->
                 <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=500&q=80" alt="Meeting" class="guideline-img">
             </div>
         </div>
 
-        <!-- 2. Format of Paper (Slides from Right) -->
+        <!-- 2. Format of Paper (Right) -->
         <div class="glass-card guideline-section scroll-animate from-right">
             <div class="guideline-flex" style="flex-direction: row-reverse;">
                 <div style="flex: 1;">
@@ -89,16 +89,13 @@
                         <li>Margins: 1-inch all sides</li>
                         <li>Sections: Abstract, Intro, Methodology, Results, Conclusion</li>
                     </ul>
-                    <a href="images\paper_format.pdf" target="_blank" class="cta-btn" style="display:inline-block; margin-top:15px; font-size:0.8rem;">View Paper Template</a>
+                    <a href="images/paper_format.pdf" target="_blank" class="cta-btn" style="display:inline-block; margin-top:15px; font-size:0.8rem;">View Paper Template</a>
                 </div>
-                <!-- Image -->
                 <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=500&q=80" alt="Writing" class="guideline-img">
             </div>
-            <!-- Mobile Fix for reverse layout -->
-            <style>@media(max-width:768px){ .guideline-flex[style*="row-reverse"] { flex-direction: column-reverse !important; } }</style>
         </div>
 
-        <!-- 3. Format of PPT (Slides from Left) -->
+        <!-- 3. Format of PPT (Left) -->
         <div class="glass-card guideline-section scroll-animate from-left">
             <div class="guideline-flex">
                 <div style="flex: 1;">
@@ -109,62 +106,106 @@
                         <li>Time: Maximum 15 minutes per team</li>
                         <li>Content: Focus on results and visuals, avoid overcrowding text.</li>
                     </ul>
-                    <a href="images\presentation format.pdf" target="_blank" class="cta-btn" style="display:inline-block; margin-top:15px; font-size:0.8rem;">View PPT Template</a>
+                    <a href="images/presentation_format.pdf" target="_blank" class="cta-btn" style="display:inline-block; margin-top:15px; font-size:0.8rem;">View PPT Template</a>
                 </div>
-                <!-- Image -->
                 <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=500&q=80" alt="Presentation" class="guideline-img">
             </div>
         </div>
+
+        <!-- 4. Originality Requirements (Right) -->
+        <div class="glass-card guideline-section scroll-animate from-right">
+            <div class="guideline-flex" style="flex-direction: row-reverse;">
+                <div style="flex: 1;">
+                    <h3>Originality Requirements</h3>
+                    <p style="color: var(--text-muted);">We maintain high standards for academic integrity.</p>
+                    <ul class="guideline-list">
+                        <li>The <strong>plagiarism percentage</strong> of submitted papers must be <strong>below 15%</strong> (including references).</li>
+                        <li>The <strong>AI content similarity</strong> should not exceed <strong>25%</strong>.</li>
+                    </ul>
+                </div>
+                <img src="images\plagiarism.png" alt="Plagiarism Check" class="guideline-img">
+            </div>
+        </div>
+
+        <!-- 5. Eligible Submissions (Left) -->
+        <div class="glass-card guideline-section scroll-animate from-left">
+            <div class="guideline-flex">
+                <div style="flex: 1;">
+                    <h3>Eligible Submissions</h3>
+                    <p style="color: var(--text-muted);">Students are permitted to submit academic work based on their current year:</p>
+                    <ul class="guideline-list" style="margin-top: 10px;">
+                        <li><strong>Second Year (SE):</strong> CEP (Community Engagement Project) – Synopsis Papers</li>
+                        <li><strong>Third Year (TE):</strong> TS (Technical Seminar) – Research Papers</li>
+                        <li><strong>Final Year (BE):</strong> Final Year Project – Research Papers</li>
+                    </ul>
+                </div>
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=500&q=80" alt="Students" class="guideline-img">
+            </div>
+        </div>
+
+        <!-- 6. Team Size (Right) -->
+        <div class="glass-card guideline-section scroll-animate from-right">
+            <div class="guideline-flex" style="flex-direction: row-reverse;">
+                <div style="flex: 1;">
+                    <h3>Team Size</h3>
+                    <ul class="guideline-list">
+                        <li>Each submission may consist of <strong>1 to 4 members</strong>.</li>
+                        <li>Participants are allowed to submit individually or as part of a group.</li>
+                    </ul>
+                </div>
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80" alt="Team" class="guideline-img">
+            </div>
+        </div>
+
     </main>
 
-<!-- Footer Section -->
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        
-        <!-- Column 1: Brand -->
-        <div class="footer-col brand">
-            <div class="footer-brand-box">
-                <img src="images\logo.png" alt="R&D Logo">
-                <div class="brand-text">
-                    <h2>R&D Club</h2>
-                    <p>Research & Development<br>Club PCCOE</p>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-col brand">
+                <div class="footer-brand-box">
+                    <img src="images/logo.png" alt="R&D Logo">
+                    <div class="brand-text">
+                        <h2>R&D Club</h2>
+                        <p>Research & Development<br>Club PCCOE</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Column 2: Location -->
-        <div class="footer-col">
-            <h4>Location</h4>
-            <p>Sector - 26, Pradhikaran, Nigdi,</p>
-            <p>Near Akurdi Railway Station,</p>
-            <p>Pune - 411 044</p>
-        </div>
-
-        <!-- Column 3: Follow Us -->
-        <div class="footer-col">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <!-- Column 2: Location -->
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p>Sector - 26, Pradhikaran, Nigdi,</p>
+                <p>Near Akurdi Railway Station,</p>
+                <p>Pune - 411 044</p>
             </div>
+
+            <!-- Column 3: Follow Us -->
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 4: Contact Us -->
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Ph: +91 8446257853</p>
+                <p>Ph: +91 8975806265</p>
+                <a href="mailto:researchdevelopmentclubpccoe@gmail.com" class="footer-link">researchdevelopmentclubpccoe@gmail.com</a>
+            </div>
+
         </div>
 
-        <!-- Column 4: Contact Us -->
-        <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>Ph: +91 8446257853</p>
-            <p>Ph: +91 8975806265</p>
-            <a href="mailto:researchdevelopmentclubpccoe@gmail.com" class="footer-link">researchdevelopmentclubpccoe@gmail.com</a>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2026 R&D Club. All Rights Reserved.</p>
         </div>
-
-    </div>
-
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p>© 2026 R&D Club. All Rights Reserved.</p>
-    </div>
-</footer>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
