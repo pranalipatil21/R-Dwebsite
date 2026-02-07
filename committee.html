@@ -11,217 +11,182 @@
     <canvas id="bg-canvas"></canvas>
     
     <!-- Navbar -->
-            <nav>
-                <div class="logo-container">
-                    <!-- Update image path if needed (e.g. images/logo.png) -->
-                    <img src="images/logo.png" alt="Logo"> 
-                    <div class="logo-text-group">
-                        <h3>Research & Development</h3>
-                        <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
-                    </div>
-                </div>
+    <nav>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo"> 
+            <div class="logo-text-group">
+                <h3>Research & Development</h3>
+                <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
+            </div>
+        </div>
 
-                <!-- HAMBURGER ICON -->
-                <div class="hamburger" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
 
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="committee.html">Committee</a></li>
-                    <li><a href="guidelines.html">Guidelines</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
-                    <!-- Check active class for each page -->
-                    <li><a href="registration.html" class="cta-btn">Register</a></li>
-                </ul>
-            </nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="committee.html" class="active">Committee</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="registration.html" class="cta-btn">Register</a></li>
+        </ul>
+    </nav>
 
     <main class="container">
         <h1 class="page-title">Organizing Committee</h1>
 
-        <!-- 1. HEAD OF DEPARTMENT (Centered Top) -->
+    <!-- 1. HEAD OF DEPARTMENT (Centered Top) -->
         <h2 class="section-title">Head of Department</h2>
-        <!-- Used Flexbox to perfectly center the single HOD card -->
         <div style="display: flex; justify-content: center; margin-bottom: 60px;">
             <div class="glass-card" style="text-align: center; max-width: 350px; width: 100%;">
-                <!-- Update Image Path for HOD -->
-                <img src="images\sonali.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="HOD" class="profile-img">
-                <h3>Dr. Sonali Patil</h3>
-                <p class="role">Head of Computer Engineering</p>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">
+                <img src="images/sonali.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Dr. Sonali Patil" class="profile-img">
+                
+                <!-- Added style="text-align: center" to override global justify -->
+                <h3 style="text-align: center;">Dr. Sonali Patil</h3>
+                <p class="role" style="text-align: center;">Head of Computer Engineering</p>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px; text-align: center;">
                     Visionary Leader & Guide
                 </p>
             </div>
         </div>
 
-        <!-- 2. FACULTY ADVISORS (3 Cards Centered) -->
+        <!-- 2. FACULTY COORDINATORS -->
         <h2 class="section-title">Faculty Coordinators</h2>
-        <!-- Changed grid to Flex + Wrap + Justify Center to force centering -->
         <div class="team-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
             
-            <!-- Dr. Reena Kharat -->
-            <div class="glass-card" style="text-align: center; flex: 0 1 300px;">
-                <img src="images/reena.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="Dr. Reena Kharat" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 300px;">
+                <img src="images/reena.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Dr. Reena Kharat" class="profile-img">
                 <h3>Dr. Reena Kharat</h3>
-                <p class="role">Research & Development Coordinator</p>
+                <p class="role">R&D Coordinator</p>
             </div>
 
-            <!-- Dr. Asmita Manna -->
-            <div class="glass-card" style="text-align: center; flex: 0 1 300px;">
-                <img src="images/asmita.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="Dr. Asmita Manna" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 300px;">
+                <img src="images/asmita.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Dr. Asmita Manna" class="profile-img">
                 <h3>Dr. Asmita Manna</h3>
-                <p class="role">Research & Development Coordinator</p>
+                <p class="role">R&D Coordinator</p>
             </div>
 
-            <!-- Dr. Meghana Lokhande -->
-            <div class="glass-card" style="text-align: center; flex: 0 1 300px;">
-                <img src="images/meghana.jpg" onerror="this.src='https://via.placeholder.com/150'" alt="Dr. Meghana Lokhande" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 300px;">
+                <img src="images/meghana.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Dr. Meghana Lokhande" class="profile-img">
                 <h3>Dr. Meghana Lokhande</h3>   
-                <p class="role">Research & Development Coordinator</p>
+                <p class="role">R&D Coordinator</p>
+            </div>
+
+            <div class="glass-card" style="text-align: center; width: 300px;">
+                <img src="images/anagha.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Dr. Anagha Chaudhari" class="profile-img">
+                <h3>Dr. Anagha Chaudhari</h3>
+                <p class="role">R&D Coordinator</p>
             </div>
         </div>
 
-        <!-- 3. STUDENT COMMITTEE (Example) -->
+        <!-- 3. STUDENT COMMITTEE -->
         <h2 class="section-title">Student Committee</h2>
         <div class="team-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px;">
-            <!-- Student 1 -->
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\ujwal_wagh.png" alt="Student" class="profile-img">
+            
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/ujwal_wagh.png" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Ujwal Wagh</h3>
                 <p class="role">Founding President</p>
             </div>
 
-
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\smera_nimje.jpeg" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/smera_nimje.jpeg" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Smera Nimje</h3>
                 <p class="role">Vice President</p>
             </div>
 
-
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\mitali_chaudhari.jpg" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/mitali_chaudhari.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Mitali Chaudhari</h3>
-                <p class="role">Secretory </p>
+                <p class="role">Secretary</p>
             </div>
             
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\vedant_maldure.jpeg" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/vedant_maldure.jpeg" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Vedant Maldure</h3>
-                <p class="role">Management executive</p>
+                <p class="role">Management Executive</p>
             </div>
 
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\Piyush (2).png" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/Piyush (2).png" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Piyush Ahirao</h3>
                 <p class="role">Treasurer</p>
             </div>
 
-            <!-- <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\parth_ranaware.jpeg" alt="Student" class="profile-img">
-                <h3>Parth Ranaware</h3>
-                <p class="role">Marketing executive</p>
-            </div> -->
-
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\pranali.png" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/pranali.png" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Pranali Patil</h3>
                 <p class="role">Web Master</p>
             </div>
-
-            <!-- <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\.jpg" alt="Student" class="profile-img">
-                <h3>XYZ</h3>
-                <p class="role">Funding Proposal CHAIR</p>
-            </div> -->
             
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\sayali_pawar.jpg" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/sayali_pawar.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Sayali Pawar</h3>
-                <p class="role">Funding Proposal CHAIR</p>
+                <p class="role">Funding Chair</p>
             </div>
 
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\rohit_lad.jpg" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/rohit_lad.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Rohit Lad</h3>
-                <p class="role">IPR CHAIR</p>
+                <p class="role">IPR Chair</p>
             </div>
-            
-            <!-- <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\rupam_karale.jpg" alt="Student" class="profile-img">
-                <h3>Rupam Karale</h3>
-                <p class="role">Publication CHAIR</p>
-            </div> -->
 
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\prathamesh_marathe.png" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/prathamesh_marathe.png" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Prathamesh Marathe</h3>
-                <p class="role"> IPR CO-CHAIR</p>
+                <p class="role">IPR Co-Chair</p>
             </div>
             
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\sahil_patel.JPG" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/sahil_patel.JPG" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Sahil Patel</h3>
-                <p class="role">Publication CO-CHAIR</p>
+                <p class="role">Publication Co-Chair</p>
             </div>
 
-            <div class="glass-card" style="text-align: center; flex: 0 1 250px;">
-                <img src="images\abhishek_raje.jpg" alt="Student" class="profile-img">
+            <div class="glass-card" style="text-align: center; width: 280px;">
+                <img src="images/abhishek_raje.jpg" onerror="this.src='https://via.placeholder.com/180'" alt="Student" class="profile-img">
                 <h3>Abhishek Raje</h3>
-                <p class="role">Design / Visual Media </p>
+                <p class="role">Design Head</p>
             </div>
-            
 
         </div>
     </main>
 
-    <!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        
-        <!-- Column 1: Brand -->
-        <div class="footer-col brand">
-            <div class="footer-brand-box">
-                <img src="images\logo.png" alt="R&D Logo">
-                <div class="brand-text">
-                    <h2>R&D Club</h2>
-                    <p>Research & Development<br>Club PCCOE</p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col brand">
+                <div class="footer-brand-box">
+                    <img src="images/logo.png" alt="R&D Logo">
+                    <div class="brand-text">
+                        <h2>R&D Club</h2>
+                        <p>Research & Development<br>Club PCCOE</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Column 2: Location -->
-        <div class="footer-col">
-            <h4>Location</h4>
-            <p>Sector - 26, Pradhikaran, Nigdi,</p>
-            <p>Near Akurdi Railway Station,</p>
-            <p>Pune - 411 044</p>
-        </div>
-
-        <!-- Column 3: Follow Us -->
-        <div class="footer-col">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p>Sector - 26, Pradhikaran, Nigdi,<br>Near Akurdi Railway Station,<br>Pune - 411 044</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Ph: +91 8446257853</p>
+                <p>Ph: +91 8975806265</p>
+                <a href="mailto:researchdevelopmentclubpccoe@gmail.com" class="footer-link">researchdevelopmentclubpccoe@gmail.com</a>
             </div>
         </div>
-
-        <!-- Column 4: Contact Us -->
-        <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>Ph: +91 8446257853</p>
-            <p>Ph: +91 8975806265</p>
-            <a href="mailto:researchdevelopmentclubpccoe@gmail.com" class="footer-link">researchdevelopmentclubpccoe@gmail.com</a>
+        <div class="footer-bottom">
+            <p>© 2026 R&D Club. All Rights Reserved.</p>
         </div>
+    </footer>
 
-    </div>
-
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p>© 2026 R&D Club. All Rights Reserved.</p>
-    </div>
-</footer>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* script.js - Complete Fixed Version */
 
 /* 1. COUNTDOWN TIMER */
-const eventDate = new Date("March 18, 2026 09:00:00").getTime();
+const eventDate = new Date("March 13, 2026 09:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
