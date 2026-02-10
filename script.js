@@ -196,10 +196,25 @@ function nextStep() {
     let isValid = true;
     
     currentInputs.forEach(input => {
+        // 1. Check if empty
         if (input.hasAttribute("required") && input.value.trim() === "") {
             isValid = false;
             input.style.borderColor = "red";
             setTimeout(() => input.style.borderColor = "", 2000);
+        }
+
+        // 2. SPECIAL CHECK: Phone Number (Must be 10 digits)
+        if (input.name === "LeaderPhone") {
+            const phoneVal = input.value.trim();
+            // Regex: Checks if it contains exactly 10 digits
+            const phonePattern = /^[0-9]{10}$/;
+            
+            if (!phonePattern.test(phoneVal)) {
+                isValid = false;
+                input.style.borderColor = "red";
+                alert("Phone number must be exactly 10 digits.");
+                setTimeout(() => input.style.borderColor = "", 2000);
+            }
         }
     });
 
@@ -209,7 +224,10 @@ function nextStep() {
             showStep(currentStep);
         }
     } else {
-        alert("Please fill in all required fields.");
+        // This alert shows if fields are empty
+        if(!document.querySelector('input[name="LeaderPhone"]').style.borderColor) {
+             alert("Please fill in all required fields correctly.");
+        }
     }
 }
 

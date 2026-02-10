@@ -59,7 +59,7 @@
                     </div>
                     <div class="input-group">
                         <label>Phone Number</label>
-                        <input type="tel" name="LeaderPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" maxlength="10" required>
+                         <input type="tel" name="LeaderPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Please enter exactly 10 digits" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
                     </div>
                     <div class="input-group">
                         <label>Year</label>
