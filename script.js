@@ -2,6 +2,8 @@
 
 /* 1. COUNTDOWN TIMER */
 const eventDate = new Date("March 13, 2026 09:00:00").getTime();
+const eventDateElement = document.getElementById("days");
+
 
 function updateCountdown() {
     const now = new Date().getTime();

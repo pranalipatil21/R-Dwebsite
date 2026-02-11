@@ -9,6 +9,15 @@
 </head>
 <body>
     <canvas id="bg-canvas"></canvas>
+     <!--  Announcement Bar -->
+        <div class="announcement-bar">
+            <div class="announcement-text">
+                Last Date of Submission: 16 Feb 2026 &nbsp; | &nbsp;
+                Dates & Tracks Updated &nbsp; | &nbsp;
+                AI Plagiarism below 25% &nbsp; | &nbsp;
+                Similarity Index below 15%
+            </div>
+        </div>
 
             <nav>
                 <div class="logo-container">
@@ -41,8 +50,14 @@
             <!-- PCCOE College Logo Added Here -->
             <img src="images\pccoelogo.png" alt="PCCOE Logo" class="hero-college-logo">
 
+            <h2 class="marathi-title">अभिनव २०२६</h2>
+
             <h1 class="page-title">Young Professional Conference</h1>
-             <h2 class="sanskrit-hero">“अनुसन्धानं नवसृजनस्य मूलम्”</h2>
+             <h2 class="sanskrit-hero">
+                युवा शक्यता नवविचाराः । अन्वेषणेण नूतनदृष्टिः ।<br>
+                अभिनवेन प्रगत्याशः । विकासस्य नव युगम् ॥
+            </h2>
+
 
             <p style="font-size: 1.2rem; color: var(--text-muted);">Revolutionize your ideas. Innovate, Research, Publish.</p>
             
@@ -54,6 +69,14 @@
                 <div class="time-unit"><span id="seconds">00</span>Secs</div>
             </div>
         </section>
+        <div class="plagiarism-card">
+            <h2>Plagiarism Policy</h2>
+                <ul class="plagiarism-list">
+                    <li>AI Plagiarism must be below <b>25%</b></li>
+                    <li>Similarity Index must be below <b>15%</b></li>
+                </ul>
+        </div>
+
 
         <!-- About Us -->
         <section style="margin-top: 80px;">
@@ -74,7 +97,11 @@
             <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Signal Processing" class="track-img">
             <div class="track-info">
                 <h3>Image Processing</h3>
-                <p>Exploring advanced algorithms for digital signal analysis, image enhancement, and pattern recognition in real-world applications including medical imaging and satellite data.</p>
+                    <ol class="subtrack-list">
+                        <li>Image Enhancement & Segmentation</li>
+                        <li>Medical & Biomedical Image Processing</li>
+                        <li>Deep Learning based Image Analysis</li>
+                    </ol>
             </div>
         </div>
 
@@ -82,9 +109,14 @@
         <div class="track-box scroll-animate from-right">
             <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robotics" class="track-img">
             <div class="track-info">
-                <h3>IOT & Robotics</h3>
-                <p>Innovations in autonomous systems, industrial automation, and control theories driving the future of manufacturing, drone technology, and intelligent logic systems.</p>
+                 <h3>IoT & Robotics</h3>
+                    <ol class="subtrack-list">
+                        <li>IoT-based Smart Systems</li>
+                        <li>Autonomous Robots & Drones</li>
+                         <li>Embedded Systems & Sensor Networks</li>
+                    </ol>
             </div>
+
         </div>
 
         <!-- Track 3: Data Science (Slides from LEFT) -->
@@ -92,7 +124,11 @@
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data Science" class="track-img">
             <div class="track-info">
                 <h3>Data Science and Big Data Analysis</h3>
-                <p>Unlocking insights from massive datasets through predictive modeling, data mining, and statistical computation to solve complex business and scientific problems.</p>
+                <ol class="subtrack-list">
+                    <li>Predictive Analytics</li>
+                    <li>Big Data Processing</li>
+                    <li>Data Visualization & Business Intelligence</li>
+                </ol>
             </div>
         </div>
 
@@ -101,25 +137,36 @@
             <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80" alt="Security" class="track-img">
             <div class="track-info">
                 <h3>Networks and Security</h3>
-                <p>Next-gen networking protocols, cybersecurity defenses, blockchain technology, and secure infrastructure for a connected and safer digital world.</p>
-            </div>
+                    <ol class="subtrack-list">
+                        <li>Cryptography & Secure Communication</li>
+                        <li>Cloud Computing</li>
+                        <li>Blockchain</li>
+                     </ol>
         </div>
-
+        </div>
         <!-- Track 5: AR/VR (Slides from LEFT) -->
         <div class="track-box scroll-animate from-left">
             <img src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?auto=format&fit=crop&w=800&q=80" alt="AR VR" class="track-img">
             <div class="track-info">
                 <h3>Computer Vision, AR & VR</h3>
-                <p>Bridging the physical and digital worlds through immersive technologies (Augmented & Virtual Reality) and advanced visual understanding systems.</p>
+                    <ol class="subtrack-list">
+                        <li>3D Vision</li>
+                        <li>Metaverse and Gaming</li>
+                        <li>Gesture, Object & Motion Recognition</li>
+                    </ol>
             </div>
         </div>
-
         <!-- Track 6: Machine Learning (Slides from RIGHT) -->
         <div class="track-box scroll-animate from-right">
             <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="Machine Learning" class="track-img">
             <div class="track-info">
                 <h3>Cognitive Computing and Machine Learning</h3>
                 <p>Developing intelligent systems capable of learning, reasoning, and interacting naturally with humans using Neural Networks and Deep Learning architectures.</p>
+                <ol class="subtrack-list">
+                    <li>Machine Learning & Deep Learning Models</li>
+                    <li>Natural Language Processing</li>
+                    <li>Generative & Agentic AI</li>
+                </ol>
             </div>
         </div>
 
