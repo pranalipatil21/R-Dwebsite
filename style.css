@@ -55,6 +55,7 @@ body {
     height: 100%;
     z-index: -1;
     opacity: 0.5; 
+    pointer-events: none;
 }
 
 /* ===========================
@@ -1117,6 +1118,7 @@ nav {
     -webkit-mask-composite: xor;
             mask-composite: exclude;
     animation: borderGlow 4s linear infinite;
+    pointer-events: none;
 }
 
 /* smooth glow animation */
@@ -1199,7 +1201,7 @@ nav {
 /* ===== Premium Button ===== */
 .register-btn {
     display: inline-block;
-_toggle: none;
+    
     padding: 16px 38px;
     font-size: 18px;
     font-weight: 600;
@@ -1286,47 +1288,3 @@ body{
     margin-bottom: 14px;      
     text-align: center;
 }
-
-/* ===== REGISTRATION BACKGROUND ANIMATION ===== */
-.bg-animation{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-/* animated particles */
-.bg-animation span{
-    position: absolute;
-    display: block;
-    width: 6px;
-    height: 6px;
-    background: rgba(59,130,246,0.4);
-    border-radius: 50%;
-    animation: floatParticles 20s linear infinite;
-}
-
-/* second color */
-.bg-animation span:nth-child(even){
-    background: rgba(249,115,22,0.4);
-}
-
-@keyframes floatParticles{
-    0%{
-        transform: translateY(100vh) scale(0);
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(-10vh) scale(1);
-        opacity: 0;
-    }
-}
-
-
-
