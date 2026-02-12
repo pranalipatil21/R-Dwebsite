@@ -191,9 +191,13 @@ nav.nav-zoomed .logo-container img { transform: scale(1.15); }
 }
 
 .sanskrit-hero {
-    font-size: 1.5rem; color: var(--bright-amber);
-    margin-bottom: 25px; font-weight: 700;
+    font-size: 1.1rem; /* Reduced from 1.5rem */
+    color: var(--bright-amber);
+    margin-bottom: 25px; 
+    font-weight: 700;
     text-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+    text-align: center; /* Ensures it stays centered */
+    line-height: 1.8;   /* Adds a bit of space between the two lines */
 }
 
 .section-title {
@@ -499,3 +503,124 @@ footer {
     font-weight: 900;
     color: #ffd54a;
 }
+
+/* Apply justification globally to paragraphs, list items, and descriptions */
+p, 
+li, 
+.glass-card p, 
+.track-info p, 
+.subtrack-list li, 
+.guideline-section p,
+.sanskrit-hero {
+    text-align: justify;
+    text-justify: inter-word; /* Spreads words evenly */
+    hyphens: auto;           /* Optional: breaks long words to prevent gaps */
+}
+
+/* Ensure the Hero content stays justified but remains visually balanced */
+.hero p, .sanskrit-hero {
+    max-width: 800px; /* Limits width so justification looks better */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- UNIVERSAL CLASSY BOLD TITLE STYLING --- */
+h1, .abhinav-title, .section-title {
+    font-weight: 900 !important;  /* Maximum thickness */
+    text-transform: uppercase;
+    letter-spacing: 2px;          
+    text-align: center;
+    line-height: 1.1;
+    
+    /* Solid Metallic Look */
+    background: linear-gradient(to bottom, #ffffff 40%, #a1a1a1 100%);
+
+    /* --- COMPATIBILITY FIXES --- */
+    -webkit-background-clip: text; /* For Chrome, Safari, Edge */
+    background-clip: text;         /* Standard property for Firefox and others */
+    
+    -webkit-text-fill-color: transparent; /* For Webkit browsers */
+    color: transparent;                   /* Standard fallback to make gradient visible */
+
+    /* Subtle thickness effect */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+
+    /* Heavy Shadow for depth */
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
+    margin-bottom: 20px;
+}
+
+/* --- THE MAIN HERO TITLE (ABHINAV 2K26) --- */
+.abhinav-title {
+    font-size: 6rem; /* Increased size */
+    letter-spacing: 8px;
+    /* Strong glow to highlight the bold edges */
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+    margin-top: 20px;
+}
+
+/* --- SECTION TITLES (About Us, Tracks, etc.) --- */
+.section-title {
+    font-size: 3.5rem; /* Bigger and Bolder */
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+/* The Bold Gradient Underline */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 6px; /* Thicker line */
+    background: linear-gradient(90deg, var(--primary-blue), var(--contrast-orange));
+    margin: 15px auto 0;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+}
+
+/* ===========================
+   CLASSY VIDEO BACKGROUND
+   =========================== */
+.video-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2; /* Stays behind everything, even the canvas */
+    overflow: hidden;
+    background-color: #02040a; /* Fallback color */
+}
+
+.video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills screen without stretching */
+    filter: brightness(0.4) contrast(1.1); /* Darkens video for readability */
+}
+
+/* The dark gradient overlay makes text "pop" */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(2, 4, 10, 0.7) 0%,
+        rgba(2, 4, 10, 0.3) 50%,
+        rgba(2, 4, 10, 0.8) 100%
+    );
+    z-index: 1;
+}
+
+/* If you prefer an image instead of video, use this class on a div
+.image-bg {
+    background: url('bg-image.jpg') no-repeat center center/cover;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+    filter: brightness(0.5);
+} */
