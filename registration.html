@@ -1,233 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registration | R&D Conference</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | R&D Conference</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-<!-- Announcement Bar -->
-   <div class="announcement-bar">
-            <div class="announcement-text">
-                Last Date of Submission: 16 Feb 2026 &nbsp; | &nbsp;
-                Dates & Tracks Updated &nbsp; | &nbsp;
-                AI Plagiarism below 25% &nbsp; | &nbsp;
-                Similarity Index below 15%
+    <div class="announcement-bar">
+        <div class="announcement-text">
+            Last Date of Submission: 16 Feb 2026 &nbsp; | &nbsp;
+            Dates & Tracks Updated &nbsp; | &nbsp;
+            AI Plagiarism below 25% &nbsp; | &nbsp;
+            Similarity Index below 15%
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo">
+            <div class="logo-text-group">
+                <h3>R&D Club</h3>
+                <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
             </div>
         </div>
+        <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="registration.html" class="cta-btn active">Register</a></li>
+        </ul>
+    </nav>
 
-<!-- NAVBAR -->
-<nav>
-<div class="logo-container">
-<img src="images/logo.png" alt="Logo">
-<div class="logo-text-group">
-<h3>Research & Development</h3>
-<span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
-</div>
-</div>
-
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="committee.html">Committee</a></li>
-                    <li><a href="guidelines.html">Guidelines</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
-                    <!-- Check active class for each page -->
-                    <li><a href="registration.html" class="cta-btn">Register</a></li>
-                </ul>
-            </nav>
     <main class="container">
-        <h1 class="page-title">Conference Registration</h1>
-
-        <div class="glass-card form-box">
+        <!-- Hero Section with Custom Countdown for Registration -->
+        <section class="hero" style="padding-top:140px; text-align:center;">
+            <h1 class="page-title">Conference</h1>
             
-            <!-- Progress Bar -->
-            <div class="progress-container">
-                <div class="progress-bar" id="progressBar"></div>
+            <!-- Added data-deadline attribute here -->
+            <div class="timer-box" style="margin-top:40px;" data-deadline="Feb 16, 2026 23:59:59">
+                <div class="time-unit"><span id="days">00</span>Days</div>
+                <div class="time-unit"><span id="hours">00</span>Hours</div>
+                <div class="time-unit"><span id="minutes">00</span>Mins</div>
+                <div class="time-unit"><span id="seconds">00</span>Secs</div>
             </div>
+        </section>
 
-            <form id="confForm" name="submit-to-google-sheet">                
-                <!-- STEP 1: Leader Info -->
-                <div class="form-step active">
-                    <h3>Step 1: Team Leader Details</h3>
-                    <div class="input-group">
-                        <label>Full Name</label>
-                        <input type="text" name="LeaderName" placeholder="e.g. Rahul Sharma" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Email Address</label>
-                        <input type="email" name="LeaderEmail" placeholder="e.g. rahul@pccoe.org" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" name="LeaderPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" maxlength="10" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Year</label>
-                        <select name="LeaderYear" required>
-                            <option value="">Select Year</option>
-                            <option value="FY">First Year (FY)</option>
-                            <option value="SY">Second Year (SY)</option>
-                            <option value="TY">Third Year (TY)</option>
-                            <option value="B.Tech">Fourth Year (B.Tech)</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label>Department</label>
-                        <input type="text" name="LeaderDept" placeholder="e.g. Computer Engineering" required>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="cta-btn" onclick="nextStep()">Next <i class="fa-solid fa-arrow-right"></i></button>
+        <!-- REGISTER NOW BOX -->
+        <section class="register-box-section">
+            <div class="register-box">
+                <h2>Conference Paper Registration</h2>
+                <p>
+                  Submit your research work and be a part of the Young Professional Conference 2026.
+                  Click below to complete your registration and secure your participation.
+                </p>
+                
+                <!-- Blue-Orange Gradient Button -->
+                <a href="https://forms.gle/26XN7wv2aB5QxayT7" target="_blank" class="cta-btn" style="font-size: 1.2rem; padding: 15px 50px; display:inline-block;">
+                  Register Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col brand">
+                <div class="footer-brand-box">
+                    <img src="images/logo.png" alt="R&D Logo">
+                    <div class="brand-text">
+                        <h2>R&D Club</h2>
+                        <p>Research & Development<br>Club PCCOE</p>
                     </div>
                 </div>
-
-                <!-- STEP 2: Team Info -->
-                <div class="form-step">
-                    <h3>Step 2: Team Members</h3>
-                    <div class="input-group">
-                        <label>Team Name</label>
-                        <input type="text" name="TeamName" placeholder="e.g. The Innovators" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label>Total Team Size (Including Leader)</label>
-                        <select id="teamSizeSelect" name="TeamSize" onchange="generateMemberFields()" required>
-                            <option value="1">1 (Individual)</option>
-                            <option value="2">2 Members</option>
-                            <option value="3">3 Members</option>
-                            <option value="4">4 Members</option>
-                        </select>
-                    </div>
-
-                    <div class="input-group">
-                        <label>Institute Name (Common for all)</label>
-                        <input type="text" name="Institute" placeholder="PCCOE, Pune" required>
-                    </div>
-
-                    <!-- Dynamic Fields Container -->
-                    <div id="member-fields-container"></div>
-
-                    <div class="btn-group">
-                        <button type="button" class="cta-btn btn-prev" onclick="prevStep()">Back</button>
-                        <button type="button" class="cta-btn" onclick="nextStep()">Next <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
+            </div>
+            <div class="footer-col">
+                <h4>Location</h4>
+                <p>Sector - 26, Pradhikaran, Nigdi,<br>Near Akurdi Railway Station,<br>Pune - 411 044</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/researchdevelopmentclubpccoe" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Ph: +91 8446257853</p>
+                <p>Ph: +91 8975806265</p>
+                <a href="mailto:researchdevelopmentclubpccoe@gmail.com" class="footer-link">researchdevelopmentclubpccoe@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 R&D Club. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-                <!-- STEP 3: Paper Details -->
-                <div class="form-step">
-                    <h3>Step 3: Paper Submission</h3>
-                    <div class="input-group">
-                        <label>Paper Title</label>
-                        <input type="text" name="PaperTitle" placeholder="Enter full research title" required>
-                    </div>
-                    <div class="input-group">
-                        <label>Select Track</label>
-                        <select name="Track" required>
-                            <option value="Track 1:Image Processing">Image Processing</option>
-                            <option value="Track 2:Internet of Things (IoT) & Robotics">Internet of Things (IoT) & Robotics</option>
-                            <option value="Track 3:Data Science & Big Data Analytics">Data Science & Big Data Analytics</option>
-                            <option value="Track 4:Networks & Security">Networks & Security</option>
-                            <option value="Track 5:Computer Vision, Augmented Reality & Virtual Reality">Computer Vision, Augmented Reality & Virtual Reality</option>
-                            <option value="Track 6:Cognitive Computing & Machine Learning">Cognitive Computing & Machine Learning </option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label>Paper Drive Link (PDF)</label>
-                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 5px;">*Upload PDF to Google Drive > Share > Anyone with link > Paste URL.</p>
-                        <input type="url" name="PaperLink" placeholder="https://drive.google.com/..." required>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="cta-btn btn-prev" onclick="prevStep()">Back</button>
-                        <button type="submit" class="cta-btn">Submit Registration</button>
-                    </div>
-                </div>
-    <a href="https://forms.gle/26XN7wv2aB5QxayT7" target="_blank" class="register-btn">
-      Register Now
-    </a>
-
-  </div>
-
-</section>
-
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-<div class="footer-content">
-
-<!-- Brand -->
-<div class="footer-col brand">
-<div class="footer-brand-box">
-<img src="images/logo.png" alt="R&D Logo">
-<div class="brand-text">
-<h2>R&D CLUB</h2>
-<p>RESEARCH & DEVELOPMENT<br>CLUB PCCOE</p>
-</div>
-</div>
-</div>
-
-<!-- Location -->
-<div class="footer-col">
-<h4>Location</h4>
-<p>Sector - 26, Pradhikaran, Nigdi,</p>
-<p>Near Akurdi Railway Station,</p>
-<p>Pune - 411 044</p>
-</div>
-
-<!-- Social -->
-<div class="footer-col">
-<h4>Follow Us</h4>
-<div class="social-icons">
-<a href="https://www.instagram.com/researchdevelopmentclubpccoe"><i class="fa-brands fa-instagram"></i></a>
-<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-</div>
-</div>
-
-<!-- Contact -->
-<div class="footer-col">
-<h4>Contact Us</h4>
-<p>Ph: +91 8446257853</p>
-<p>Ph: +91 8975806265</p>
-
-<p><a href="mailto:ujwal.wagh23@pccoepune.org" class="footer-link">ujwal.wagh23@pccoepune.org</a></p>
-<p><a href="mailto:smera.nimje23@pccoepune.org" class="footer-link">smera.nimje23@pccoepune.org</a></p>
-</div>
-
-</div>
-
-<div class="footer-bottom">
-<p>© 2026 R&D Club. All Rights Reserved.</p>
-</div>
-</footer>
-
-<!-- COUNTDOWN SCRIPT -->
-<script>
-var deadline = new Date("Feb 16, 2026 23:59:59").getTime();
-
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = deadline - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-
-  if (distance < 0) {
-    clearInterval(x);
-    document.querySelector(".timer-box").innerHTML = "Registration Closed";
-  }
-}, 1000);
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
