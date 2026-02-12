@@ -1,3 +1,4 @@
+
 /* style.css - Final Solid Text & Gradient Theme */
 
 :root {
@@ -54,6 +55,7 @@ body {
     height: 100%;
     z-index: -1;
     opacity: 0.5; 
+    pointer-events: none;
 }
 
 /* ===========================
@@ -1011,4 +1013,278 @@ nav.nav-zoomed .nav-links a {
     text-align: justify;
     text-justify: inter-word; /* Ensures spaces between words are even */
     margin: 0; /* Ensures neat spacing */
+}
+
+/* ===== Yellow Announcement Bar ===== */
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffd54a;
+    color: #000;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 9999;
+    text-align: center;
+}
+
+/* scrolling text */
+.announcement-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 8px 0;
+    animation: scrollText 18s linear infinite;
+}
+
+@keyframes scrollText {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(-100%); }
+}
+
+/* push navbar below yellow bar */
+nav {
+    margin-top: 48px;   /* perfectly matches bar height */
+}
+
+/* ===== Plagiarism Card (match marquee yellow & smaller size) ===== */
+.plagiarism-card {
+    background: #ffd54a;              /* SAME yellow as marquee */
+    border: none;                     /* clean look */
+    color: #000;
+    padding: 28px 36px;               /* reduced height */
+    border-radius: 18px;
+    max-width: 480px;                 /* smaller width */
+    margin: 70px auto 40px;           /* centered spacing */
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* title */
+.plagiarism-card h2 {
+    font-size: 26px;                  /* slightly smaller */
+    margin-bottom: 16px;
+}
+
+/* list */
+.plagiarism-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* list items */
+.plagiarism-list li {
+    font-size: 17px;
+    margin: 8px 0;
+}
+
+/* custom bullet */
+.plagiarism-list li::before {
+    content: "• ";
+    font-weight: bold;
+}
+
+/* ===== Register Box Section ===== */
+.register-box-section {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 130px;
+}
+
+/* ===== Premium Register Card ===== */
+.register-box {
+    position: relative;
+    background: linear-gradient(145deg, rgba(15,25,45,0.95), rgba(5,10,25,0.95));
+    border-radius: 24px;
+    padding: 60px 70px;
+    text-align: center;
+    max-width: 560px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+/* ✨ glowing animated border */
+.register-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1.5px;
+    background: linear-gradient(120deg, #ffd54a, #ff8c00, #ffd54a);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: borderGlow 4s linear infinite;
+    pointer-events: none;
+}
+
+/* smooth glow animation */
+@keyframes borderGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* ===== Title ===== */
+.register-box h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Description ===== */
+.register-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d0d4dc;
+    line-height: 1.6;
+}
+
+/* ===== Register Box Section ===== */
+.register-box-section {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 130px;
+}
+
+/* ===== Premium Register Card ===== */
+.register-box {
+    position: relative;
+    background: linear-gradient(145deg, rgba(15,25,45,0.95), rgba(5,10,25,0.95));
+    border-radius: 24px;
+    padding: 60px 70px;
+    text-align: center;
+    max-width: 560px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+/* ✨ glowing animated border */
+.register-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    padding: 1.5px;
+    background: linear-gradient(120deg, #ffd54a, #ff8c00, #ffd54a);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: borderGlow 4s linear infinite;
+}
+
+/* smooth glow animation */
+@keyframes borderGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* ===== Title ===== */
+.register-box h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== Description ===== */
+.register-box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d0d4dc;
+    line-height: 1.6;
+}
+
+/* ===== Premium Button ===== */
+.register-btn {
+    display: inline-block;
+    
+    padding: 16px 38px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    background: linear-gradient(135deg, #ffd54a, #ffbf00);
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 25px rgba(255, 213, 74, 0.35);
+}
+
+/* hover effect */
+.register-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(255, 213, 74, 0.6);
+    background: linear-gradient(135deg, #ffe066, #ffb300);
+}
+
+/* Remove blue color from footer email links */
+.footer-col a {
+    color: #cccccc;          /* soft white like other text */
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: #ffffff;          /* bright on hover */
+}
+
+/* ===== Yellow Marquee ===== */
+.announcement-bar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffd54a;
+    color: #000;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.announcement-text{
+    white-space: nowrap;
+    display: inline-block;
+    padding: 8px 0;
+    animation: scrollText 18s linear infinite;
+}
+
+@keyframes scrollText{
+    from { transform: translateX(100%); }
+    to   { transform: translateX(-100%); }
+}
+
+/* push page below yellow bar */
+body{
+    padding-top: 45px;
+}
+
+/* small space between navbar and title */
+.page-title{
+    margin-top: 30px;
+}
+
+
+.marathi-title{
+    font-size: 1.6rem;
+    color: #ffd54a;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.subtrack-list{
+    margin-top: 10px;
+    padding-left: 18px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.abhinav-title {
+    font-size: 3rem;          
+    color: #facc15;           /* Gold yellow */
+    font-weight: 700;         /* Bold but clean */
+    letter-spacing: 2px;      /* Premium spacing */
+    margin-bottom: 14px;      
+    text-align: center;
 }

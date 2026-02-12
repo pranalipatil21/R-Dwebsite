@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&D Club | Registration</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
-    <canvas id="bg-canvas"></canvas>
-    
-            <nav>
-                <div class="logo-container">
-                    <!-- Update image path if needed (e.g. images/logo.png) -->
-                    <img src="images/logo.png" alt="Logo"> 
-                    <div class="logo-text-group">
-                        <h3>Research & Development</h3>
-                        <span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
-                    </div>
-                </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration | R&D Conference</title>
 
-                <!-- HAMBURGER ICON -->
-                <div class="hamburger" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+<!-- Announcement Bar -->
+   <div class="announcement-bar">
+            <div class="announcement-text">
+                Last Date of Submission: 16 Feb 2026 &nbsp; | &nbsp;
+                Dates & Tracks Updated &nbsp; | &nbsp;
+                AI Plagiarism below 25% &nbsp; | &nbsp;
+                Similarity Index below 15%
+            </div>
+        </div>
+
+<!-- NAVBAR -->
+<nav>
+<div class="logo-container">
+<img src="images/logo.png" alt="Logo">
+<div class="logo-text-group">
+<h3>Research & Development</h3>
+<span class="logo-tagline">“अनुसन्धानं नवसृजनस्य मूलम्”</span>
+</div>
+</div>
 
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -59,7 +63,7 @@
                     </div>
                     <div class="input-group">
                         <label>Phone Number</label>
-                         <input type="tel" name="LeaderPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Please enter exactly 10 digits" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+                        <input type="tel" name="LeaderPhone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" maxlength="10" required>
                     </div>
                     <div class="input-group">
                         <label>Year</label>
@@ -140,67 +144,90 @@
                         <button type="submit" class="cta-btn">Submit Registration</button>
                     </div>
                 </div>
+    <a href="https://forms.gle/26XN7wv2aB5QxayT7" target="_blank" class="register-btn">
+      Register Now
+    </a>
 
-            </form>
+  </div>
 
-            <!-- Success/Error Message -->
-            <div id="formMessage" style="display:none; text-align:center; margin-top: 20px;">
-                <h3 id="msgTitle" style="color: var(--contrast-orange);">Submitting...</h3>
-                <p id="msgText">Please wait while we record your response.</p>
-            </div>
+</section>
 
-        </div>
-    </main>
 
- <!-- Footer Section -->
+</main>
+
+<!-- FOOTER -->
 <footer>
-    <div class="footer-content">
-        
-        <!-- Column 1: Brand -->
-        <div class="footer-col brand">
-            <div class="footer-brand-box">
-                <img src="images\logo.png" alt="R&D Logo">
-                <div class="brand-text">
-                    <h2>R&D Club</h2>
-                    <p>Research & Development<br>Club PCCOE</p>
-                </div>
-            </div>
-        </div>
+<div class="footer-content">
 
-        <!-- Column 2: Location -->
-        <div class="footer-col">
-            <h4>Location</h4>
-            <p>Sector - 26, Pradhikaran, Nigdi,</p>
-            <p>Near Akurdi Railway Station,</p>
-            <p>Pune - 411 044</p>
-        </div>
+<!-- Brand -->
+<div class="footer-col brand">
+<div class="footer-brand-box">
+<img src="images/logo.png" alt="R&D Logo">
+<div class="brand-text">
+<h2>R&D CLUB</h2>
+<p>RESEARCH & DEVELOPMENT<br>CLUB PCCOE</p>
+</div>
+</div>
+</div>
 
-        <!-- Column 3: Follow Us -->
-        <div class="footer-col">
-            <h4>Follow Us</h4>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/researchdevelopmentclubpccoe?igsh=dTI4dDdyajJvMjZu" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-        </div>
+<!-- Location -->
+<div class="footer-col">
+<h4>Location</h4>
+<p>Sector - 26, Pradhikaran, Nigdi,</p>
+<p>Near Akurdi Railway Station,</p>
+<p>Pune - 411 044</p>
+</div>
 
-        <!-- Column 4: Contact Us -->
-        <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>Ph: +91 8446257853</p>
-            <p>Ph: +91 8975806265</p>
-           <p><a href="mailto:ujwal.wagh23@pccoepune.org" class="footer-link">ujwal.wagh23@pccoepune.org</a></p>
-           <p><a href="mailto:smera.nimje23@pccoepune.org" class="footer-link">smera.nimje23@pccoepune.org</a></p>
-        </div>
-    </div>
+<!-- Social -->
+<div class="footer-col">
+<h4>Follow Us</h4>
+<div class="social-icons">
+<a href="https://www.instagram.com/researchdevelopmentclubpccoe"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+</div>
+</div>
 
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p>© 2026 R&D Club. All Rights Reserved.</p>
-    </div>
+<!-- Contact -->
+<div class="footer-col">
+<h4>Contact Us</h4>
+<p>Ph: +91 8446257853</p>
+<p>Ph: +91 8975806265</p>
+
+<p><a href="mailto:ujwal.wagh23@pccoepune.org" class="footer-link">ujwal.wagh23@pccoepune.org</a></p>
+<p><a href="mailto:smera.nimje23@pccoepune.org" class="footer-link">smera.nimje23@pccoepune.org</a></p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 R&D Club. All Rights Reserved.</p>
+</div>
 </footer>
 
-    <!-- LOAD SCRIPT AT THE END -->
-    <script src="script.js"></script>
+<!-- COUNTDOWN SCRIPT -->
+<script>
+var deadline = new Date("Feb 16, 2026 23:59:59").getTime();
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = deadline - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.querySelector(".timer-box").innerHTML = "Registration Closed";
+  }
+}, 1000);
+</script>
+
 </body>
 </html>
