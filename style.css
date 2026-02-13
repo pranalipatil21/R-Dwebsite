@@ -874,3 +874,24 @@ h1, .abhinav-title, .section-title {
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
+/* Same image box for ALL cards */
+.guideline-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    border: 1px solid var(--contrast-orange);
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+    object-fit: cover;
+}
+
+/* Special styling ONLY for poster */
+.poster-img {
+    object-fit: contain;          /* show full poster */
+    background: #0b1a2a;          /* same dark theme bg */
+    padding: 8px;                 /* breathing space */
+}
+.guideline-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
